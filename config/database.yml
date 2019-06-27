@@ -21,6 +21,13 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
+localhost:
+  <<: *default
+  database: hiper_stub_voice_local
+  port: 5432
+  host: localhost
+
 development:
   <<: *default
   database: action-cable-demo_development
